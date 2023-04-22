@@ -1,0 +1,37 @@
+[
+  {
+    "id": "1",
+    "image": "/assets/images/category/kitchen.png",
+    "name": "Kitchen",
+    "count": 12,
+    "url": "/shop/left-sidebar"
+  },
+  {
+    "id": "2",
+    "image": "/assets/images/category/fashion.png",
+    "name": "Fashion",
+    "count": 23,
+    "url": "/shop/left-sidebar"
+  },
+  {
+    "id": "3",
+    "image": "/assets/images/category/handmade.png",
+    "name": "Handmade",
+    "count": 13,
+    "url": "/shop/left-sidebar"
+  },
+  {
+    "id": "4",
+    "image": "/assets/images/category/dining.jpg",
+    "name": "Dining",
+    "count": 40,
+    "url": "/shop/left-sidebar"
+  },
+  {
+    "id": "5",
+    "image": "/assets/images/category/decor.png",
+    "name": "Decor",
+    "count": 10,
+    "url": "/shop/left-sidebar"
+  }
+]
