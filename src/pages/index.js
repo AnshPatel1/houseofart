@@ -85,7 +85,7 @@ const Home = () => {
                     </Row>
                     <div className="text-center">
                         <Anchor
-                            path="/shop/left-sidebar"
+                            path="/shop/fullwidth-left-sidebar"
                             className="lezada-loadmore-button"
                         >
                             <IoIosAdd /> SEE MORE ...
