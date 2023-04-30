@@ -41,8 +41,9 @@ const ProductBasic = ({ product }) => {
     <LayoutTwo>
       {/* breadcrumb */}
       <BreadcrumbOne
-        pageTitle={product.name}
-        backgroundImage="/assets/images/backgrounds/breadcrumb-bg-1.png"
+        // pageTitle={product.name}
+        backgroundImage=""
+        // backgroundImage="/assets/images/backgrounds/breadcrumb-bg-1.png"
       >
         <ul className="breadcrumb__list">
           <li>
@@ -60,7 +61,7 @@ const ProductBasic = ({ product }) => {
       </BreadcrumbOne>
 
       {/* product details */}
-      <div className="product-details space-mt--r100 space-mb--r100">
+      <div className="product-details space-mt--r100 space-mb--r10">
         <Container>
           <Row>
             <Col lg={6} className="space-mb-mobile-only--50">

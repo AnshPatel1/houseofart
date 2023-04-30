@@ -74,29 +74,29 @@ const ProductDescription = ({
                 product.variation.map((single) => {
                   return single.color === selectedProductColor
                     ? single.size.map((singleSize, i) => {
-                        return (
-                          <Fragment key={i}>
-                            <input
-                              type="radio"
-                              value={singleSize.name}
-                              checked={
-                                singleSize.name === selectedProductSize
-                                  ? "checked"
-                                  : ""
-                              }
-                              id={singleSize.name}
-                              onChange={() => {
-                                setSelectedProductSize(singleSize.name);
-                                setProductStock(singleSize.stock);
-                                setQuantityCount(1);
-                              }}
-                            />
-                            <label htmlFor={singleSize.name}>
-                              {singleSize.name}
-                            </label>
-                          </Fragment>
-                        );
-                      })
+                      return (
+                        <Fragment key={i}>
+                          <input
+                            type="radio"
+                            value={singleSize.name}
+                            checked={
+                              singleSize.name === selectedProductSize
+                                ? "checked"
+                                : ""
+                            }
+                            id={singleSize.name}
+                            onChange={() => {
+                              setSelectedProductSize(singleSize.name);
+                              setProductStock(singleSize.stock);
+                              setQuantityCount(1);
+                            }}
+                          />
+                          <label htmlFor={singleSize.name}>
+                            {singleSize.name}
+                          </label>
+                        </Fragment>
+                      );
+                    })
                     : "";
                 })}
             </div>
@@ -181,67 +181,94 @@ const ProductDescription = ({
               </button>
             </div>
           </div>
+          <div>
+            <div className="custom-content-buy-now-wrapper">
+              <div className="product-content__button-wrapper d-flex align-items-center">
+                {productStock && productStock > 0 ? (
+                  <button
+                    onClick={() =>
+                      dispatch(addToCart({
+                        ...product,
+                        quantity: quantityCount,
+                        selectedProductColor: selectedProductColor ? selectedProductColor : product.selectedProductColor ? product.selectedProductColor : null,
+                        selectedProductSize: selectedProductSize ? selectedProductSize : product.selectedProductSize ? product.selectedProductSize : null
+                      }))
+                    }
+                    disabled={productCartQty >= productStock}
+                    className="lezada-button lezada-button--medium product-content__cart space-mr--10"
+                  >
+                    Add To Cart
+                  </button>
+                ) : (
+                  <button
+                    className="lezada-button lezada-button--medium product-content__ofs space-mr--10"
+                    disabled
+                  >
+                    Out of Stock
+                  </button>
+                )}
 
-          <div className="product-content__button-wrapper d-flex align-items-center">
-            {productStock && productStock > 0 ? (
-              <button
-                onClick={() =>
-                  dispatch(addToCart({
-                    ...product,
-                    quantity: quantityCount,
-                    selectedProductColor: selectedProductColor ? selectedProductColor : product.selectedProductColor ? product.selectedProductColor : null,
-                    selectedProductSize: selectedProductSize ? selectedProductSize : product.selectedProductSize ? product.selectedProductSize : null
-                  }))
-                }
-                disabled={productCartQty >= productStock}
-                className="lezada-button lezada-button--medium product-content__cart space-mr--10"
-              >
-                Add To Cart
-              </button>
-            ) : (
-              <button
-                className="lezada-button lezada-button--medium product-content__ofs space-mr--10"
-                disabled
-              >
-                Out of Stock
-              </button>
-            )}
+                <button
+                  className={`product-content__wishlist space-mr--10 ${wishlistItem !== undefined ? "active" : ""
+                    }`}
+                  title={
+                    wishlistItem !== undefined
+                      ? "Added to wishlist"
+                      : "Add to wishlist"
+                  }
+                  onClick={
+                    wishlistItem !== undefined
+                      ? () => dispatch(deleteFromWishlist(product.id))
+                      : () => dispatch(addToWishlist(product))
+                  }
+                >
+                  <IoIosHeartEmpty />
+                </button>
 
-            <button
-              className={`product-content__wishlist space-mr--10 ${
-                wishlistItem !== undefined ? "active" : ""
-              }`}
-              title={
-                wishlistItem !== undefined
-                  ? "Added to wishlist"
-                  : "Add to wishlist"
-              }
-              onClick={
-                wishlistItem !== undefined
-                  ? () => dispatch(deleteFromWishlist(product.id))
-                  : () => dispatch(addToWishlist(product))
-              }
-            >
-              <IoIosHeartEmpty />
-            </button>
+                <button
+                  className={`product-content__compare space-mr--10 ${compareItem !== undefined ? "active" : ""
+                    }`}
+                  title={
+                    compareItem !== undefined
+                      ? "Added to compare"
+                      : "Add to compare"
+                  }
+                  onClick={
+                    compareItem !== undefined
+                      ? () => dispatch(deleteFromCompare(product.id))
+                      : () => dispatch(addToCompare(product))
+                  }
+                >
+                  <IoIosShuffle />
+                </button><br></br>
 
-            <button
-              className={`product-content__compare space-mr--10 ${
-                compareItem !== undefined ? "active" : ""
-              }`}
-              title={
-                compareItem !== undefined
-                  ? "Added to compare"
-                  : "Add to compare"
-              }
-              onClick={
-                compareItem !== undefined
-                  ? () => dispatch(deleteFromCompare(product.id))
-                  : () => dispatch(addToCompare(product))
-              }
-            >
-              <IoIosShuffle />
-            </button>
+              </div>
+              <div className="product-content__button-wrapper d-flex align-items-center mt-2">
+                {productStock && productStock > 0 ? (
+                  <button
+                    onClick={() =>
+                      dispatch(addToCart({
+                        ...product,
+                        quantity: quantityCount,
+                        selectedProductColor: selectedProductColor ? selectedProductColor : product.selectedProductColor ? product.selectedProductColor : null,
+                        selectedProductSize: selectedProductSize ? selectedProductSize : product.selectedProductSize ? product.selectedProductSize : null
+                      }))
+                    }
+                    disabled={productCartQty >= productStock}
+                    className="lezada-button lezada-button--medium product-content__cart space-mr--10 custom-content-buy-now-button"
+                  >
+                    Buy Now
+                  </button>
+                ) : (
+                  <button
+                    className="lezada-button lezada-button--medium product-content__ofs space-mr--10 custom-content-buy-now-button"
+                    disabled
+                  >
+                    Out of Stock
+                  </button>
+                )}
+              </div>
+            </div>
           </div>
 
           <div className="product-content__other-info space-mt--50">
@@ -258,7 +285,7 @@ const ProductDescription = ({
                       product.category.map((item, index, arr) => {
                         return (
                           <Anchor path="/shop/left-sidebar" key={index}>
-                              {item + (index !== arr.length - 1 ? ", " : "")}
+                            {item + (index !== arr.length - 1 ? ", " : "")}
                           </Anchor>
                         );
                       })}
@@ -271,7 +298,7 @@ const ProductDescription = ({
                       product.tag.map((item, index, arr) => {
                         return (
                           <Anchor path="/shop/left-sidebar" key={index}>
-                              {item + (index !== arr.length - 1 ? ", " : "")}
+                            {item + (index !== arr.length - 1 ? ", " : "")}
                           </Anchor>
                         );
                       })}

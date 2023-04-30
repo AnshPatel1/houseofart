@@ -426,8 +426,8 @@
     "name": "Golden Grass Foldable Bag - Lotus",
     "slug": "golden-grass-foldable-bag-lotus",
     "price": 16,
-    "discount": 20,
-    "new": true,
+    "discount": 0,
+    "new": false,
     "rating": 5,
     "ratingCount": 27,
     "saleCount": 78,
@@ -592,5 +592,84 @@
     ],
     "shortDescription": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.",
     "fullDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+  },
+  {
+    "id": "17",
+    "sku": "asdf118",
+    "name": "Handcrafted Wooden Engraved Tray - Green Floral",
+    "slug": "corporate-green-tray",
+    "price": 12,
+    "discount": 5,
+    "new": true,
+    "rating": 4,
+    "ratingCount": 15,
+    "saleCount": 19,
+    "category": ["corporate"],
+    "tag": ["corporate"],
+    "stock": 12,
+    "affiliateLink": "https://wa.me/918200520997",
+    "thumbImage": [
+      "/assets/images/product/corporate/green-tray/3.png"
+    ],
+    "image": [
+      "/assets/images/product/corporate/green-tray/1.png",
+      "/assets/images/product/corporate/green-tray/2.png",
+      "/assets/images/product/corporate/green-tray/3.png"
+    ],
+    "shortDescription": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.",
+    "fullDescription": "A beautifully crafted home accessory, this lovely wooden tray with metal handles has been hand crafted and engraved by artisans from Uttar Pradesh. Artistic woodwork and wood inlay work began as a temple and palace craft, and flourished alongside architecture and sculpture. Depending on local availability, different woods were used for wood carving, and fashioned into religious, decorative and functional articles."
+  },
+  {
+    "id": "18",
+    "sku": "asdf128",
+    "name": "Handcrafted Wooden Engraved Paper Holder - Yellow",
+    "slug": "corporate-paper-holder-yellow",
+    "price": 12,
+    "discount": 5,
+    "new": true,
+    "rating": 4,
+    "ratingCount": 15,
+    "saleCount": 19,
+    "category": ["corporate"],
+    "tag": ["corporate"],
+    "stock": 12,
+    "affiliateLink": "https://wa.me/918200520997",
+    "thumbImage": [
+      "/assets/images/product/corporate/paper-holder/yellow/3.png"
+    ],
+    "image": [
+      "/assets/images/product/corporate/paper-holder/yellow/1.png",
+      "/assets/images/product/corporate/paper-holder/yellow/2.png",
+      "/assets/images/product/corporate/paper-holder/yellow/3.png"
+    ],
+    "shortDescription": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.",
+    "fullDescription": "A beautifully crafted home accessory, this lovely wooden tray with metal handles has been hand crafted and engraved by artisans from Uttar Pradesh. Artistic woodwork and wood inlay work began as a temple and palace craft, and flourished alongside architecture and sculpture. Depending on local availability, different woods were used for wood carving, and fashioned into religious, decorative and functional articles."
+  },
+  {
+    "id": "19",
+    "sku": "asdf198",
+    "name": "Tarakashi Wooden Inlay Decorative Box - The Tree Of Life",
+    "slug": "corporate-tree-of-life-box",
+    "price": 12,
+    "discount": 5,
+    "new": true,
+    "rating": 4,
+    "ratingCount": 15,
+    "saleCount": 19,
+    "category": ["corporate"],
+    "tag": ["corporate"],
+    "stock": 12,
+    "affiliateLink": "https://wa.me/918200520997",
+    "thumbImage": [
+      "/assets/images/product/corporate/box/2.png"
+    ],
+    "image": [
+      "/assets/images/product/corporate/box/1.png",
+      "/assets/images/product/corporate/box/2.png",
+      "/assets/images/product/corporate/box/3.png",
+      "/assets/images/product/corporate/box/4.png"
+    ],
+    "shortDescription": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.",
+    "fullDescription": "A beautifully crafted home accessory, this lovely wooden tray with metal handles has been hand crafted and engraved by artisans from Uttar Pradesh. Artistic woodwork and wood inlay work began as a temple and palace craft, and flourished alongside architecture and sculpture. Depending on local availability, different woods were used for wood carving, and fashioned into religious, decorative and functional articles."
   }
 ]

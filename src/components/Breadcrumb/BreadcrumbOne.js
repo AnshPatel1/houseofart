@@ -4,7 +4,7 @@ import clsx from "clsx";
 const BreadcrumbOne = ({ children, backgroundImage, pageTitle, className }) => {
   return (
     <div
-      className={clsx("breadcrumb-area space-pt--70 space-pb--70", className)}
+      className={clsx("breadcrumb-area space-pt--1 space-pb--1", className)}
       style={{
         backgroundImage: `url("${process.env.PUBLIC_URL + backgroundImage}")`
       }}

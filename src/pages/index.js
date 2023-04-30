@@ -38,9 +38,9 @@
 
 // export default Home;
 import { Container, Row } from "react-bootstrap";
-import { IoIosAdd } from "react-icons/io";
+import { IoIosAdd, IoIosBusiness } from "react-icons/io";
 import { useSelector } from "react-redux";
-import { LayoutOne, LayoutTwo, LayoutThree, LayoutFour, LayoutFive, LayoutSix, LayoutSeven, LayoutEight, LayoutNine, LayoutTen } from "../components/Layout";
+import * as Layout from "../components/Layout";
 import { ShopInfo } from "../components/Shop";
 import { getProducts } from "../lib/product";
 import { HeroSliderTwo } from "../components/HeroSlider";
@@ -58,7 +58,7 @@ const Home = () => {
     const popularProducts = getProducts(products, "decor", "popular", 5);
     
     return (
-        <LayoutSix>
+        <Layout.LayoutTwo>
         {/* hero slider */}
             <HeroSliderTwo
                 sliderData={heroSliderData}
@@ -85,10 +85,10 @@ const Home = () => {
                     </Row>
                     <div className="text-center">
                         <Anchor
-                            path="/shop/fullwidth-left-sidebar"
+                            path="/home/decor"
                             className="lezada-loadmore-button"
                         >
-                            <IoIosAdd /> SEE MORE ...
+                            <IoIosBusiness /> CHECK OUR CORPORATE COLLECTION
                         </Anchor>
                     </div>
                 </Container>
@@ -98,8 +98,8 @@ const Home = () => {
             {/* <BlogPostSlider blogData={blogData} spaceBottomClass="space-mb--50" /> */}
 
             {/*shop info*/}
-            <ShopInfo />
-        </LayoutSix>
+            {/* <ShopInfo /> */}
+        </Layout.LayoutTwo>
     );
 };
 

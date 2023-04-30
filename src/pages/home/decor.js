@@ -9,9 +9,9 @@ import imageCtaData from "../../data/image-cta/image-cta-one.json";
 
 const Decor = () => {
     const { products } = useSelector((state) => state.product);
-    const newProducts = getProducts(products, "decor", "new", 9);
-    const popularProducts = getProducts(products, "decor", "popular", 9);
-    const saleProducts = getProducts(products, "decor", "sale", 9);
+    const newProducts = getProducts(products, "corporate", "corporate", 9);
+    const popularProducts = getProducts(products, "corporate", "corporate", 9);
+    const saleProducts = getProducts(products, "corporate", "corporate", 9);
 
     return (
         <LayoutOne aboutOverlay={false}>
@@ -26,12 +26,12 @@ const Decor = () => {
             />
 
             {/* image cta */}
-            <ImageCta
+            {/* <ImageCta
                 image={imageCtaData.image}
                 tags={imageCtaData.tags}
                 title={imageCtaData.title}
                 url={imageCtaData.url}
-            />
+            /> */}
         </LayoutOne>
     );
 };

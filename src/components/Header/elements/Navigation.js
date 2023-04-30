@@ -532,11 +532,11 @@ const Navigation = () => {
           </ul>
         </li>
         <li className="position-relative">
-          <Anchor path="/blog/standard-left-sidebar">
-            Blog
+          <Anchor path="/home/decor">
+            Corporate Gifting
           </Anchor>
-          <IoIosArrowDown />
-          <ul className="sub-menu sub-menu--one-column">
+          {/* <IoIosArrowDown /> */}
+          {/* <ul className="sub-menu sub-menu--one-column">
             <li>
               <Anchor path="/blog/standard-left-sidebar">
                 Standard Layout
@@ -629,7 +629,7 @@ const Navigation = () => {
                 </li>
               </ul>
             </li>
-          </ul>
+          </ul> */}
         </li>
       </ul>
     </nav>

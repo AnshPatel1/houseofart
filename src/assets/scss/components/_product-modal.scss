@@ -285,6 +285,19 @@
     }
   }
 }
+.custom-content-buy-now-wrapper {
+  max-width: max-content;
+}
+
+.custom-content-buy-now-button {
+  width: 100%;
+}
+
+.custom-content-buy-now-button:hover {
+  border-color: #d3122a;
+  background-color: #d3122a;
+  color: #ffffff !important;
+}
 
 /*=====  End of product modal  ======*/
 
