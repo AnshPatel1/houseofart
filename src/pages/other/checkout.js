@@ -10,6 +10,7 @@ import Anchor from "../../components/anchor";
 const Checkout = () => {
   let cartTotalPrice = 0;
   const { cartItems } = useSelector((state) => state.cart);
+  console.log(cartItems);
 
   useEffect(() => {
     document.querySelector("body").classList.remove("overflow-hidden");
