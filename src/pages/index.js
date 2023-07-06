@@ -37,29 +37,34 @@
 // };
 
 // export default Home;
-import { Container, Row } from "react-bootstrap";
-import { IoIosAdd, IoIosBusiness } from "react-icons/io";
-import { useSelector } from "react-redux";
+import {Col, Container, Row} from "react-bootstrap";
+import {IoIosAdd, IoIosBusiness} from "react-icons/io";
+import {useSelector} from "react-redux";
 import * as Layout from "../components/Layout";
-import { ShopInfo } from "../components/Shop";
-import { getProducts } from "../lib/product";
-import { HeroSliderTwo } from "../components/HeroSlider";
-import { CategorySlider } from "../components/Category";
-import { SectionTitleOne } from "../components/SectionTitle";
-import { ProductGridWrapper } from "../components/ProductThumb";
-import { BlogPostSlider } from "../components/Blog";
+import {ShopInfo} from "../components/Shop";
+import {getProducts} from "../lib/product";
+import {HeroSliderTwo} from "../components/HeroSlider";
+import {CategorySlider} from "../components/Category";
+import {SectionTitleOne} from "../components/SectionTitle";
+import {ProductGridWrapper} from "../components/ProductThumb";
+import {BlogPostSlider} from "../components/Blog";
 import Anchor from "../components/anchor";
 import categoryData from "../data/categories/category-one.json";
 import blogData from "../data/blog-posts/blog-post-one.json";
 import heroSliderData from "../data/hero-sliders/hero-slider-two.json";
+import {TestimonialOne} from "../components/Testimonial";
+import testimonialData from "../data/testimonials/testimonial-one.json";
+import {BrandLogoOne} from "../components/BrandLogo";
+import brandLogoData from "../data/brand-logos/brand-logo-one.json";
+import {FaMoneyBillAlt, FaRegLifeRing, FaShoppingBasket} from "react-icons/fa";
 
 const Home = () => {
-    const { products } = useSelector((state) => state.product);
+    const {products} = useSelector((state) => state.product);
     const popularProducts = getProducts(products, "decor", "popular", 5);
-    
+
     return (
-        <Layout.LayoutTwo>
-        {/* hero slider */}
+        <Layout.LayoutFive>
+            {/* hero slider */}
             <HeroSliderTwo
                 sliderData={heroSliderData}
                 spaceBottomClass="space-mb--50"
@@ -88,9 +93,59 @@ const Home = () => {
                             path="/home/decor"
                             className="lezada-loadmore-button"
                         >
-                            <IoIosBusiness /> CHECK OUR CORPORATE COLLECTION
+                            <IoIosBusiness/> CHECK OUR CORPORATE COLLECTION
                         </Anchor>
                     </div>
+                </Container>
+            </div>
+            <TestimonialOne
+                testimonialData={testimonialData}
+                backgroundImage="/assets/images/backgrounds/testimonials-bg.png"
+            />
+            <div className="space-mb--r100"></div>
+            {/* brand logo */}
+            <BrandLogoOne brandLogoData={brandLogoData}/>
+            <div className="space-mb--r100"></div>
+            <div
+                className="icon-box-area border-top--grey border-bottom--grey space-pt--30 space-pb--30">
+                <Container>
+                    <Row className="space-mb-mobile-only--m30">
+                        <Col md={4} className="space-mb-mobile-only--30">
+                            <div className="icon-box icon-box--feature-icon">
+                                <div className="icon-box--feature-icon__icon">
+                                    <FaMoneyBillAlt/>
+                                </div>
+                                <div className="icon-box--feature-icon__content">
+                                    <h3 className="title">MONEY BACK</h3>
+                                    <p className="content">100% money back guarantee</p>
+                                </div>
+                            </div>
+                        </Col>
+                        <Col md={4} className="space-mb-mobile-only--30">
+                            <div className="icon-box icon-box--feature-icon">
+                                <div className="icon-box--feature-icon__icon">
+                                    <FaShoppingBasket/>
+                                </div>
+                                <div className="icon-box--feature-icon__content">
+                                    <h3 className="title">FREE SHIPPING &amp; RETURN</h3>
+                                    <p className="content">
+                                        Free shipping on all orders over $99
+                                    </p>
+                                </div>
+                            </div>
+                        </Col>
+                        <Col md={4} className="space-mb-mobile-only--30">
+                            <div className="icon-box icon-box--feature-icon">
+                                <div className="icon-box--feature-icon__icon">
+                                    <FaRegLifeRing/>
+                                </div>
+                                <div className="icon-box--feature-icon__content">
+                                    <h3 className="title">24/7 SUPPORT</h3>
+                                    <p className="content">Live fast and good support 24/7.</p>
+                                </div>
+                            </div>
+                        </Col>
+                    </Row>
                 </Container>
             </div>
 
@@ -99,7 +154,7 @@ const Home = () => {
 
             {/*shop info*/}
             {/* <ShopInfo /> */}
-        </Layout.LayoutTwo>
+        </Layout.LayoutFive>
     );
 };
 
