@@ -5,13 +5,15 @@ import { Provider } from "react-redux";
 import { PersistGate } from 'redux-persist/integration/react';
 import { wrapper } from "../store";
 import { setProducts } from "../store/slices/product-slice";
-import products from "../data/products.json";
+// import products from "../data/products.json";
+import "../api/products";
 import Preloader from "../components/Preloader";
 
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 import 'swiper/swiper-bundle.min.css';
 import "../assets/scss/styles.scss";
+import fetchProducts from "../api/products";
 
 
 const workSans = Work_Sans({
@@ -24,7 +26,13 @@ const workSans = Work_Sans({
 const MyApp = ({Component, ...rest}) => {
   const {store, props} = wrapper.useWrappedStore(rest);
   useEffect(() => {
-    store.dispatch(setProducts(products));
+    // store.dispatch(setProducts(products));
+    const loadProducts = async () => {
+        const products = await fetchProducts();
+        console.log(products);
+        store.dispatch(setProducts(products));
+    };
+    loadProducts().then(() => console.log('Products loaded'));
   }, []);
 
   return (
