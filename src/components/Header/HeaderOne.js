@@ -74,6 +74,7 @@ const HeaderOne = ({ aboutOverlay}) => {
                   <img
                     src={process.env.PUBLIC_URL + "/assets/images/logo.png"}
                     className="img-fluid"
+                    style={{maxWidth: "140px"}}
                     alt=""
                   />
               </Anchor>

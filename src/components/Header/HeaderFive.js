@@ -58,74 +58,74 @@ const HeaderFive = ({ aboutOverlay }) => {
       <header
         className={`topbar-shadow ${scroll > headerTop ? "is-sticky" : ""}`}
       >
-        <div className="header-top-area border-bottom--grey space-pt--10 space-pb--10 d-none d-lg-block">
-          <Container className="wide">
-            <div className="header-top">
-              <div className="header-top__left">
-                <div className="language-change change-dropdown">
-                  <span>English</span> <IoIosArrowDown />
-                  <ul>
-                    <li>
-                      <button>English</button>
-                    </li>
-                    <li>
-                      <button>Deustch</button>
-                    </li>
-                  </ul>
-                </div>
-                <span className="header-separator">|</span>
-                <div className="currency-change change-dropdown">
-                  <span>USD</span> <IoIosArrowDown />
-                  <ul>
-                    <li>
-                      <button>USD</button>
-                    </li>
-                    <li>
-                      <button>EUR</button>
-                    </li>
-                  </ul>
-                </div>
-                <span className="header-separator">|</span>
-                <div className="order-online-text">
-                  Order Online Call
-                  <span className="number">(0123) 456789</span>
-                </div>
-              </div>
-              <div className="header-top__right">
-                <div className="signup-link">
-                  <Anchor path="/other/login-register">
-                    Signup / Login
-                  </Anchor>
-                </div>
-                <span className="header-separator">|</span>
-                <div className="top-social-icons">
-                  <ul>
-                    <li>
-                      <a href="https://www.twitter.com" target="_blank">
-                        <IoLogoTwitter />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://www.facebook.com" target="_blank">
-                        <IoLogoFacebook />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://www.instagram.com" target="_blank">
-                        <IoLogoInstagram />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://www.youtube.com" target="_blank">
-                        <IoLogoYoutube />
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </Container>
-        </div>
+        {/*<div className="header-top-area border-bottom--grey space-pt--10 space-pb--10 d-none d-lg-block">*/}
+          {/*<Container className="wide">*/}
+          {/*  <div className="header-top">*/}
+          {/*    <div className="header-top__left">*/}
+          {/*      <div className="language-change change-dropdown">*/}
+          {/*        <span>English</span> <IoIosArrowDown />*/}
+          {/*        <ul>*/}
+          {/*          <li>*/}
+          {/*            <button>English</button>*/}
+          {/*          </li>*/}
+          {/*          <li>*/}
+          {/*            <button>Deustch</button>*/}
+          {/*          </li>*/}
+          {/*        </ul>*/}
+          {/*      </div>*/}
+          {/*      <span className="header-separator">|</span>*/}
+          {/*      <div className="currency-change change-dropdown">*/}
+          {/*        <span>USD</span> <IoIosArrowDown />*/}
+          {/*        <ul>*/}
+          {/*          <li>*/}
+          {/*            <button>USD</button>*/}
+          {/*          </li>*/}
+          {/*          <li>*/}
+          {/*            <button>EUR</button>*/}
+          {/*          </li>*/}
+          {/*        </ul>*/}
+          {/*      </div>*/}
+          {/*      <span className="header-separator">|</span>*/}
+          {/*      <div className="order-online-text">*/}
+          {/*        Order Online Call*/}
+          {/*        <span className="number">(0123) 456789</span>*/}
+          {/*      </div>*/}
+          {/*    </div>*/}
+          {/*    <div className="header-top__right">*/}
+          {/*      <div className="signup-link">*/}
+          {/*        <Anchor path="/other/login-register">*/}
+          {/*          Signup / Login*/}
+          {/*        </Anchor>*/}
+          {/*      </div>*/}
+          {/*      <span className="header-separator">|</span>*/}
+          {/*      <div className="top-social-icons">*/}
+          {/*        <ul>*/}
+          {/*          <li>*/}
+          {/*            <a href="https://www.twitter.com" target="_blank">*/}
+          {/*              <IoLogoTwitter />*/}
+          {/*            </a>*/}
+          {/*          </li>*/}
+          {/*          <li>*/}
+          {/*            <a href="https://www.facebook.com" target="_blank">*/}
+          {/*              <IoLogoFacebook />*/}
+          {/*            </a>*/}
+          {/*          </li>*/}
+          {/*          <li>*/}
+          {/*            <a href="https://www.instagram.com" target="_blank">*/}
+          {/*              <IoLogoInstagram />*/}
+          {/*            </a>*/}
+          {/*          </li>*/}
+          {/*          <li>*/}
+          {/*            <a href="https://www.youtube.com" target="_blank">*/}
+          {/*              <IoLogoYoutube />*/}
+          {/*            </a>*/}
+          {/*          </li>*/}
+          {/*        </ul>*/}
+          {/*      </div>*/}
+          {/*    </div>*/}
+          {/*  </div>*/}
+          {/*</Container>*/}
+        {/*</div>*/}
         <div className="header-bottom-area">
           <Container className="wide">
             <div className="header-content d-flex align-items-center justify-content-between position-relative space-py-mobile-only--30">
@@ -135,6 +135,7 @@ const HeaderFive = ({ aboutOverlay }) => {
                     <img
                       src={process.env.PUBLIC_URL + "/assets/images/logo.png"}
                       className="img-fluid"
+                      style={{ width: "140px" }}
                       alt=""
                     />
                 </Anchor>
