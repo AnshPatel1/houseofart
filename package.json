@@ -33,7 +33,8 @@
     "redux-persist": "^6.0.0",
     "swiper": "^8.4.5",
     "uuid": "^9.0.0",
-    "yet-another-react-lightbox": "^2.2.2"
+    "yet-another-react-lightbox": "^2.2.2",
+    "axios": "^1.4.0"
   },
   "devDependencies": {
     "redux-devtools-extension": "^2.13.8",
